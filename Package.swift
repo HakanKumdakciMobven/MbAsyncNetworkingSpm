@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "MbAsyncNetworkingSpm",
+    name: "MbAsyncNetworking",
     platforms: [
         .iOS(.v12)
     ],
@@ -17,10 +17,6 @@ let package = Package(
         .binaryTarget(
             name: "MBAsyncNetworking",
             path: "MBAsyncNetworking.xcframework"
-        ),
-        .testTarget(
-            name: "MbAsyncNetworkingSpmTests",
-            dependencies: ["MBAsyncNetworking"]
-        ),
+        )
     ]
 )
