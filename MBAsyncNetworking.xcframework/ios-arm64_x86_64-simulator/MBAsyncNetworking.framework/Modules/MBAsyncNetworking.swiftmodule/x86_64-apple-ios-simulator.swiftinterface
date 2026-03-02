@@ -1,0 +1,262 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -module-name MBAsyncNetworking -package-name mbasyncnetworking
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
+import Combine
+import Foundation
+import Foundation/*.Bundle*/
+import Foundation/*.ProcessInfo*/
+import Foundation/*.URL*/
+import MobKitCore
+import OSLog
+import Security
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension MBAsyncNetworking.AsyncNetworkable {
+  public func fetch<T>(hasAuthentication: Swift.Bool = true, isRefreshToken: Swift.Bool = false) async throws -> T where T : Swift.Decodable
+}
+extension MBAsyncNetworking.AsyncNetworkable {
+  public func getRequest(queryItems: [Swift.String : Swift.String] = [:], headers: [Swift.String : Swift.String] = [:], url: Foundation.URL, httpMethod: MBAsyncNetworking.RequestMethod = .get, addBearerToken: Swift.Bool = true) async -> Foundation.URLRequest
+  public func getRequest(body: some Encodable, headers: [Swift.String : Swift.String] = [:], url: Foundation.URL, httpMethod: MBAsyncNetworking.RequestMethod = .post, addBearerToken: Swift.Bool = true) async -> Foundation.URLRequest
+  public func getRequest(queryItems: [Swift.String : Swift.String] = [:], body: some Encodable, headers: [Swift.String : Swift.String] = [:], url: Foundation.URL, httpMethod: MBAsyncNetworking.RequestMethod = .post, addBearerToken: Swift.Bool = true) async -> Foundation.URLRequest
+  public func getRequest(url: Foundation.URL, formItems: [Swift.String : Swift.String] = [:], headers: [Swift.String : Swift.String] = [:], httpMethod: MBAsyncNetworking.RequestMethod = .post, addBearerToken: Swift.Bool = true) async -> Foundation.URLRequest
+  public func uploadRequest(method: MBAsyncNetworking.RequestMethod, url: Foundation.URL, parameters: [Swift.String : Swift.String] = [:], files: [MBAsyncNetworking.File] = [], headers: [Swift.String : Swift.String] = [:]) async -> Foundation.URLRequest
+  public func prepareRequest(withUrl url: Foundation.URL, queryItems: [Swift.String : Swift.String] = [:], method: MBAsyncNetworking.RequestMethod, contentType: MBAsyncNetworking.NetworkContentType, headers: [Swift.String : Swift.String] = [:], addBearerToken: Swift.Bool = true) async -> Foundation.URLRequest
+}
+public protocol AsyncNetworkable {
+  func request() async -> Foundation.URLRequest
+}
+public protocol PinnableSessionDelegate : Foundation.URLSessionDelegate {
+  var certificatePaths: [Swift.String] { get set }
+}
+@objc final public class URLSessionPinnableDelegateAsync : ObjectiveC.NSObject, MBAsyncNetworking.PinnableSessionDelegate {
+  final public var certificatePaths: [Swift.String]
+  public init(certificatePaths: [Swift.String] = [])
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public func urlSession(_ session: Foundation.URLSession, didReceive challenge: Foundation.URLAuthenticationChallenge) async -> (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?)
+  #endif
+  @objc deinit
+}
+extension MBAsyncNetworking.URLSessionPinnableDelegateAsync : Foundation.URLSessionTaskDelegate {
+  @objc final public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didFinishCollecting metrics: Foundation.URLSessionTaskMetrics)
+}
+extension MBAsyncNetworking.PinnableSessionDelegate {
+  public func logTask(_ task: Foundation.URLSessionTask, didFinishCollecting metrics: Foundation.URLSessionTaskMetrics)
+}
+public enum NetworkableConfigs {
+  case `default`
+  public func setCertificatePaths(_ certificateResourcePaths: Swift.String...)
+  public func setCertificatePathArray(_ certificateResourcePaths: [Swift.String])
+  public func setTimeout(for request: Foundation.TimeInterval, resource: Foundation.TimeInterval)
+  public func setServerTrustedURLAuthenticationChallenge()
+  public func setServerTrustedAuthenticationChallenge(_ challenge: any MBAsyncNetworking.PinnableSessionDelegate)
+  public func setServerTrustedAuthenticationChallenge()
+  public func set(configuration: Foundation.URLSessionConfiguration)
+  public static func == (a: MBAsyncNetworking.NetworkableConfigs, b: MBAsyncNetworking.NetworkableConfigs) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class Session {
+  public static let shared: MBAsyncNetworking.Session
+  final public var session: Foundation.URLSession
+  final public var delegate: any Foundation.URLSessionDelegate
+  @objc deinit
+}
+extension Swift.Error {
+  public var unwrappedError: any Swift.Error {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var httpStatusCode: Swift.Int? {
+    get
+  }
+  #endif
+}
+public enum ErrorCode {
+}
+extension Swift.Array where Element == Security.SecCertificate {
+  public var publicKeys: [Security.SecKey] {
+    get
+  }
+}
+extension Security.SecCertificate {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var publicKey: Security.SecKey? {
+    get
+  }
+  #endif
+}
+extension Security.SecTrust {
+  public var certificates: [Security.SecCertificate] {
+    get
+  }
+}
+extension Foundation.URL {
+  public init(forceString string: Swift.String)
+  public func adding(parameters: [Swift.String : Swift.String]) -> Foundation.URL
+}
+extension MBAsyncNetworking.AsyncNetworkable {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func printResponse(_ data: Foundation.Data?, request: Foundation.URLRequest)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func printErrorLog(_ error: (any Swift.Error)?, request: Foundation.URLRequest)
+  #endif
+  public func printLog(_ log: Swift.String, level: os.OSLogType = .info)
+}
+public protocol NetworkLogsDelegate : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func didReceiveResponse(request: Foundation.URLRequest, data: Foundation.Data?, log: Swift.String)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func didReceiveError(request: Foundation.URLRequest, error: (any Swift.Error)?, log: Swift.String)
+  #endif
+}
+extension MBAsyncNetworking.NetworkLogsDelegate {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func didReceiveResponse(request: Foundation.URLRequest, data: Foundation.Data?, log: Swift.String)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func didReceiveError(request: Foundation.URLRequest, error: (any Swift.Error)?, log: Swift.String)
+  #endif
+}
+@_hasMissingDesignatedInitializers public class NetworkLogsManager {
+  public static let shared: MBAsyncNetworking.NetworkLogsManager
+  weak public var delegate: (any MBAsyncNetworking.NetworkLogsDelegate)?
+  @objc deinit
+}
+public enum NetworkContentType {
+  case json
+  case urlencoded
+  case multipartFormData(Swift.String)
+}
+public protocol NetworkingStorable {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var refreshToken: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var accessToken: Swift.String? { get set }
+  #endif
+}
+@_hasMissingDesignatedInitializers @_Concurrency.MainActor public class OAuthManager {
+  @_Concurrency.MainActor public static let shared: MBAsyncNetworking.OAuthManager
+  @_Concurrency.MainActor public var authManager: MBAsyncNetworking.OAuthProvider
+  @objc deinit
+}
+public protocol OAuthProviderDelegate : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func didRequestTokenRefresh() async throws -> MBAsyncNetworking.OAuthResponse?
+  #endif
+}
+public struct OAuthResponse {
+  public let accessToken: Swift.String
+  public let refreshToken: Swift.String
+  public let expiresIn: Swift.Int
+  public init(accessToken: Swift.String, refreshToken: Swift.String, expiresIn: Swift.Int)
+}
+@_hasMissingDesignatedInitializers public actor OAuthProvider {
+  weak public var delegate: (any MBAsyncNetworking.OAuthProviderDelegate)?
+  public func setDelegate(_ delegate: any MBAsyncNetworking.OAuthProviderDelegate)
+  public func validToken() async throws -> MBAsyncNetworking.OAuthResponse
+  @discardableResult
+  public func refreshToken() async throws -> MBAsyncNetworking.OAuthResponse
+  @objc deinit
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  @_semantics("defaultActor") nonisolated final public var unownedExecutor: _Concurrency.UnownedSerialExecutor {
+    get
+  }
+}
+public enum RequestMethod : Swift.String {
+  case delete
+  case get
+  case post
+  case put
+  case patch
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public actor RequestQueue {
+  public static let shared: MBAsyncNetworking.RequestQueue
+  public func executeAfterTokenRefresh<T>(_ operation: @escaping () async throws -> T) async throws -> T where T : Swift.Decodable
+  @objc deinit
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  @_semantics("defaultActor") nonisolated final public var unownedExecutor: _Concurrency.UnownedSerialExecutor {
+    get
+  }
+}
+extension MBAsyncNetworking.StubURLProtocol {
+  public enum Result {
+    case success(Foundation.Data)
+    case failure(any Swift.Error)
+    case failureStatusCode(Swift.Int)
+    case failureWithData(Foundation.Data)
+  }
+}
+@objc @_inheritsConvenienceInitializers final public class StubURLProtocol : Foundation.URLProtocol {
+  public static var result: MBAsyncNetworking.StubURLProtocol.Result? {
+    get
+    set
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override dynamic public init(request: Foundation.URLRequest, cachedResponse: Foundation.CachedURLResponse?, client: (any Foundation.URLProtocolClient)?)
+  #endif
+  @objc deinit
+}
+extension MBAsyncNetworking.StubURLProtocol {
+  @objc override final public class func canInit(with request: Foundation.URLRequest) -> Swift.Bool
+  @objc override final public class func canInit(with task: Foundation.URLSessionTask) -> Swift.Bool
+  @objc override final public class func canonicalRequest(for request: Foundation.URLRequest) -> Foundation.URLRequest
+  @objc override final public func startLoading()
+  @objc override final public func stopLoading()
+}
+public struct File {
+  public var name: Swift.String
+  public var fileName: Swift.String
+  public var fileExtension: Swift.String
+  public var mimeType: Swift.String
+  public var data: Foundation.Data
+  public init(name: Swift.String, fileName: Swift.String, fileExtension: Swift.String, mimeType: Swift.String, data: Foundation.Data)
+}
+@_hasMissingDesignatedInitializers @_Concurrency.MainActor final public class UserSession : Foundation.ObservableObject {
+  @_Concurrency.MainActor final public class func initialize(with storage: any MBAsyncNetworking.NetworkingStorable)
+  @_Concurrency.MainActor final public class var shared: MBAsyncNetworking.UserSession {
+    get
+  }
+  @_Concurrency.MainActor final public var user: MBAsyncNetworking.OAuthResponse? {
+    get
+  }
+  @_Concurrency.MainActor final public func save(_ user: MBAsyncNetworking.OAuthResponse)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor final public var token: Swift.String? {
+    get
+  }
+  #endif
+  @_Concurrency.MainActor final public var isLoggedIn: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor final public class func clear()
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+public struct SignedUser {
+  public var accessToken: Swift.String?
+  public var refreshToken: Swift.String?
+  public var tokenType: Swift.String?
+  public var expiresIn: Swift.Int?
+}
+extension MBAsyncNetworking.NetworkableConfigs : Swift.Equatable {}
+extension MBAsyncNetworking.NetworkableConfigs : Swift.Hashable {}
+extension MBAsyncNetworking.OAuthManager : Swift.Sendable {}
+extension MBAsyncNetworking.RequestMethod : Swift.Equatable {}
+extension MBAsyncNetworking.RequestMethod : Swift.Hashable {}
+extension MBAsyncNetworking.RequestMethod : Swift.RawRepresentable {}
+extension MBAsyncNetworking.UserSession : Swift.Sendable {}

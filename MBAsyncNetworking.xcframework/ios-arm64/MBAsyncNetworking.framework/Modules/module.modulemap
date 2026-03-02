@@ -1,0 +1,4 @@
+framework module MBAsyncNetworking {
+    header "MBAsyncNetworking-Swift.h"
+    requires objc
+}
