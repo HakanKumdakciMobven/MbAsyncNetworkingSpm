@@ -9,7 +9,7 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "MbAsyncNetworkingSpm",
+            name: "MBAsyncNetworking",
             targets: ["MBAsyncNetworking"]
         ),
     ],
