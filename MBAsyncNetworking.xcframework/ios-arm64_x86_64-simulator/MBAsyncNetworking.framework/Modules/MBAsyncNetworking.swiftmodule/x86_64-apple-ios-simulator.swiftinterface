@@ -15,18 +15,35 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 extension MBAsyncNetworking.AsyncNetworkable {
-  public func fetch<T>(hasAuthentication: Swift.Bool = true, isRefreshToken: Swift.Bool = false) async throws -> T where T : Swift.Decodable
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func fetch<T>(hasAuthentication: Swift.Bool = true, isRefreshToken: Swift.Bool = false, using client: MBAsyncNetworking.NetworkClient? = nil) async throws -> T where T : Swift.Decodable
+  #endif
 }
 extension MBAsyncNetworking.AsyncNetworkable {
-  public func getRequest(queryItems: [Swift.String : Swift.String] = [:], headers: [Swift.String : Swift.String] = [:], url: Foundation.URL, httpMethod: MBAsyncNetworking.RequestMethod = .get, addBearerToken: Swift.Bool = true) async -> Foundation.URLRequest
-  public func getRequest(body: some Encodable, headers: [Swift.String : Swift.String] = [:], url: Foundation.URL, httpMethod: MBAsyncNetworking.RequestMethod = .post, addBearerToken: Swift.Bool = true) async -> Foundation.URLRequest
-  public func getRequest(queryItems: [Swift.String : Swift.String] = [:], body: some Encodable, headers: [Swift.String : Swift.String] = [:], url: Foundation.URL, httpMethod: MBAsyncNetworking.RequestMethod = .post, addBearerToken: Swift.Bool = true) async -> Foundation.URLRequest
-  public func getRequest(url: Foundation.URL, formItems: [Swift.String : Swift.String] = [:], headers: [Swift.String : Swift.String] = [:], httpMethod: MBAsyncNetworking.RequestMethod = .post, addBearerToken: Swift.Bool = true) async -> Foundation.URLRequest
-  public func uploadRequest(method: MBAsyncNetworking.RequestMethod, url: Foundation.URL, parameters: [Swift.String : Swift.String] = [:], files: [MBAsyncNetworking.File] = [], headers: [Swift.String : Swift.String] = [:]) async -> Foundation.URLRequest
-  public func prepareRequest(withUrl url: Foundation.URL, queryItems: [Swift.String : Swift.String] = [:], method: MBAsyncNetworking.RequestMethod, contentType: MBAsyncNetworking.NetworkContentType, headers: [Swift.String : Swift.String] = [:], addBearerToken: Swift.Bool = true) async -> Foundation.URLRequest
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getRequest(queryItems: [Swift.String : Swift.String] = [:], headers: [Swift.String : Swift.String] = [:], url: Foundation.URL, httpMethod: MBAsyncNetworking.RequestMethod = .get, addBearerToken: Swift.Bool = true, using client: MBAsyncNetworking.NetworkClient? = nil) async -> Foundation.URLRequest
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getRequest(body: some Encodable, headers: [Swift.String : Swift.String] = [:], url: Foundation.URL, httpMethod: MBAsyncNetworking.RequestMethod = .post, addBearerToken: Swift.Bool = true, using client: MBAsyncNetworking.NetworkClient? = nil) async -> Foundation.URLRequest
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getRequest(queryItems: [Swift.String : Swift.String] = [:], body: some Encodable, headers: [Swift.String : Swift.String] = [:], url: Foundation.URL, httpMethod: MBAsyncNetworking.RequestMethod = .post, addBearerToken: Swift.Bool = true, using client: MBAsyncNetworking.NetworkClient? = nil) async -> Foundation.URLRequest
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getRequest(url: Foundation.URL, formItems: [Swift.String : Swift.String] = [:], headers: [Swift.String : Swift.String] = [:], httpMethod: MBAsyncNetworking.RequestMethod = .post, addBearerToken: Swift.Bool = true, using client: MBAsyncNetworking.NetworkClient? = nil) async -> Foundation.URLRequest
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func uploadRequest(method: MBAsyncNetworking.RequestMethod, url: Foundation.URL, parameters: [Swift.String : Swift.String] = [:], files: [MBAsyncNetworking.File] = [], headers: [Swift.String : Swift.String] = [:], using client: MBAsyncNetworking.NetworkClient? = nil) async -> Foundation.URLRequest
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func prepareRequest(withUrl url: Foundation.URL, queryItems: [Swift.String : Swift.String] = [:], method: MBAsyncNetworking.RequestMethod, contentType: MBAsyncNetworking.NetworkContentType, headers: [Swift.String : Swift.String] = [:], addBearerToken: Swift.Bool = true, using client: MBAsyncNetworking.NetworkClient? = nil) async -> Foundation.URLRequest
+  #endif
 }
 public protocol AsyncNetworkable {
   func request() async -> Foundation.URLRequest
+}
+extension MBAsyncNetworking.AsyncNetworkable {
+  public func request(using client: MBAsyncNetworking.NetworkClient) async -> Foundation.URLRequest
 }
 public protocol PinnableSessionDelegate : Foundation.URLSessionDelegate {
   var certificatePaths: [Swift.String] { get set }
@@ -45,25 +62,31 @@ extension MBAsyncNetworking.URLSessionPinnableDelegateAsync : Foundation.URLSess
 extension MBAsyncNetworking.PinnableSessionDelegate {
   public func logTask(_ task: Foundation.URLSessionTask, didFinishCollecting metrics: Foundation.URLSessionTaskMetrics)
 }
-public enum NetworkableConfigs {
-  case `default`
-  public func setCertificatePaths(_ certificateResourcePaths: Swift.String...)
-  public func setCertificatePathArray(_ certificateResourcePaths: [Swift.String])
-  public func setTimeout(for request: Foundation.TimeInterval, resource: Foundation.TimeInterval)
-  public func setServerTrustedURLAuthenticationChallenge()
-  public func setServerTrustedAuthenticationChallenge(_ challenge: any MBAsyncNetworking.PinnableSessionDelegate)
-  public func setServerTrustedAuthenticationChallenge()
-  public func set(configuration: Foundation.URLSessionConfiguration)
-  public static func == (a: MBAsyncNetworking.NetworkableConfigs, b: MBAsyncNetworking.NetworkableConfigs) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+final public class NetworkableConfigs {
+  public static let `default`: MBAsyncNetworking.NetworkableConfigs
+  public init(session: MBAsyncNetworking.Session = Session.shared, logsManager: MBAsyncNetworking.NetworkLogsManager = NetworkLogsManager.shared)
+  final public func setCertificatePaths(_ certificateResourcePaths: Swift.String...)
+  final public func setCertificatePathArray(_ certificateResourcePaths: [Swift.String])
+  final public func setTimeout(for request: Foundation.TimeInterval, resource: Foundation.TimeInterval)
+  final public func setServerTrustedURLAuthenticationChallenge()
+  final public func setServerTrustedAuthenticationChallenge(_ challenge: any MBAsyncNetworking.PinnableSessionDelegate)
+  final public func setServerTrustedAuthenticationChallenge()
+  final public func set(configuration: Foundation.URLSessionConfiguration)
+  final public func setConnectivityWaiting(_ shouldWait: Swift.Bool)
+  final public func setLogLevel(_ level: MBAsyncNetworking.NetworkLogLevel)
+  final public func addLogHandler(_ handler: any MBAsyncNetworking.NetworkLogHandler)
+  final public func removeAllLogHandlers()
+  final public func enableConsoleLogger(minimumLogLevel: MBAsyncNetworking.NetworkLogLevel = .debug, showBodies: Swift.Bool = true)
+  final public func setLogRedactedHeaders(_ headers: Swift.Set<Swift.String>)
+  @objc deinit
+}
+final public class Session {
+  public static let shared: MBAsyncNetworking.Session
+  final public var session: Foundation.URLSession {
     get
   }
-}
-@_hasMissingDesignatedInitializers final public class Session {
-  public static let shared: MBAsyncNetworking.Session
-  final public var session: Foundation.URLSession
   final public var delegate: any Foundation.URLSessionDelegate
+  public init()
   @objc deinit
 }
 extension Swift.Error {
@@ -75,8 +98,6 @@ extension Swift.Error {
     get
   }
   #endif
-}
-public enum ErrorCode {
 }
 extension Swift.Array where Element == Security.SecCertificate {
   public var publicKeys: [Security.SecKey] {
@@ -101,12 +122,96 @@ extension Foundation.URL {
 }
 extension MBAsyncNetworking.AsyncNetworkable {
   #if compiler(>=5.3) && $NonescapableTypes
-  public func printResponse(_ data: Foundation.Data?, request: Foundation.URLRequest)
+  public func printResponse(_ data: Foundation.Data?, request: Foundation.URLRequest, statusCode: Swift.Int? = nil, using client: MBAsyncNetworking.NetworkClient? = nil)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  public func printErrorLog(_ error: (any Swift.Error)?, request: Foundation.URLRequest)
+  public func printErrorLog(_ error: (any Swift.Error)?, request: Foundation.URLRequest, statusCode: Swift.Int? = nil, using client: MBAsyncNetworking.NetworkClient? = nil)
   #endif
-  public func printLog(_ log: Swift.String, level: os.OSLogType = .info)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func printDecodingError(_ error: any Swift.Error, responseData: Foundation.Data?, request: Foundation.URLRequest, statusCode: Swift.Int? = nil, using client: MBAsyncNetworking.NetworkClient? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func printWarningLog(_ message: Swift.String, request: Foundation.URLRequest, statusCode: Swift.Int?, data: Foundation.Data? = nil, using client: MBAsyncNetworking.NetworkClient? = nil)
+  #endif
+}
+public struct NetworkLogEntry {
+  public let level: MBAsyncNetworking.NetworkLogLevel
+  public let url: Swift.String?
+  public let method: Swift.String?
+  public let headers: [Swift.String : Swift.String]?
+  public let requestBody: Foundation.Data?
+  public let responseBody: Foundation.Data?
+  public let statusCode: Swift.Int?
+  public let error: (any Swift.Error)?
+  public let decodingErrorDetail: Swift.String?
+  public let timestamp: Foundation.Date
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(level: MBAsyncNetworking.NetworkLogLevel, url: Swift.String? = nil, method: Swift.String? = nil, headers: [Swift.String : Swift.String]? = nil, requestBody: Foundation.Data? = nil, responseBody: Foundation.Data? = nil, statusCode: Swift.Int? = nil, error: (any Swift.Error)? = nil, decodingErrorDetail: Swift.String? = nil, timestamp: Foundation.Date = Date())
+  #endif
+}
+extension MBAsyncNetworking.NetworkLogEntry {
+  public var summary: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func prettyPrintedJSON(_ data: Foundation.Data?) -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func describeDecodingError(_ error: any Swift.Error) -> Swift.String?
+  #endif
+}
+public protocol NetworkLogHandler : AnyObject {
+  var minimumLogLevel: MBAsyncNetworking.NetworkLogLevel { get set }
+  func handle(entry: MBAsyncNetworking.NetworkLogEntry)
+}
+public enum OSLogHandlerFactory {
+  public static func makeDefault(minimumLogLevel: MBAsyncNetworking.NetworkLogLevel = .info) -> any MBAsyncNetworking.NetworkLogHandler
+}
+@available(iOS 14.0, macOS 11.0, watchOS 7.0, *)
+final public class OSLogHandler : MBAsyncNetworking.NetworkLogHandler {
+  final public var minimumLogLevel: MBAsyncNetworking.NetworkLogLevel
+  public init(minimumLogLevel: MBAsyncNetworking.NetworkLogLevel = .info)
+  final public func handle(entry: MBAsyncNetworking.NetworkLogEntry)
+  @objc deinit
+}
+final public class OSLegacyLogHandler : MBAsyncNetworking.NetworkLogHandler {
+  final public var minimumLogLevel: MBAsyncNetworking.NetworkLogLevel
+  public init(minimumLogLevel: MBAsyncNetworking.NetworkLogLevel = .info)
+  final public func handle(entry: MBAsyncNetworking.NetworkLogEntry)
+  @objc deinit
+}
+public enum ConsoleLogHandlerFactory {
+  public static func make(minimumLogLevel: MBAsyncNetworking.NetworkLogLevel = .debug, showBodies: Swift.Bool = true) -> any MBAsyncNetworking.NetworkLogHandler
+}
+@available(iOS 14.0, macOS 11.0, watchOS 7.0, *)
+final public class ConsoleLogHandler : MBAsyncNetworking.NetworkLogHandler {
+  final public var minimumLogLevel: MBAsyncNetworking.NetworkLogLevel
+  final public var showBodies: Swift.Bool
+  public init(minimumLogLevel: MBAsyncNetworking.NetworkLogLevel = .debug, showBodies: Swift.Bool = true)
+  final public func handle(entry: MBAsyncNetworking.NetworkLogEntry)
+  @objc deinit
+}
+final public class ConsoleLegacyLogHandler : MBAsyncNetworking.NetworkLogHandler {
+  final public var minimumLogLevel: MBAsyncNetworking.NetworkLogLevel
+  final public var showBodies: Swift.Bool
+  public init(minimumLogLevel: MBAsyncNetworking.NetworkLogLevel = .debug, showBodies: Swift.Bool = true)
+  final public func handle(entry: MBAsyncNetworking.NetworkLogEntry)
+  @objc deinit
+}
+public enum NetworkLogLevel : Swift.Int, Swift.Comparable {
+  case debug
+  case info
+  case warning
+  case error
+  case none
+  public static func < (lhs: MBAsyncNetworking.NetworkLogLevel, rhs: MBAsyncNetworking.NetworkLogLevel) -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
 }
 public protocol NetworkLogsDelegate : AnyObject {
   #if compiler(>=5.3) && $NonescapableTypes
@@ -124,15 +229,54 @@ extension MBAsyncNetworking.NetworkLogsDelegate {
   public func didReceiveError(request: Foundation.URLRequest, error: (any Swift.Error)?, log: Swift.String)
   #endif
 }
-@_hasMissingDesignatedInitializers public class NetworkLogsManager {
+public class NetworkLogsManager {
   public static let shared: MBAsyncNetworking.NetworkLogsManager
+  public var handlers: [any MBAsyncNetworking.NetworkLogHandler] {
+    get
+  }
+  public func addHandler(_ handler: any MBAsyncNetworking.NetworkLogHandler)
+  public func removeAllHandlers()
+  public var minimumLogLevel: MBAsyncNetworking.NetworkLogLevel
+  public var redactedHeaders: Swift.Set<Swift.String>
   weak public var delegate: (any MBAsyncNetworking.NetworkLogsDelegate)?
+  public init(registerDefaultHandler: Swift.Bool = true)
+  public func log(_ entry: MBAsyncNetworking.NetworkLogEntry)
+  @objc deinit
+}
+final public class NetworkClient {
+  final public let session: MBAsyncNetworking.Session
+  final public let userSession: MBAsyncNetworking.UserSession
+  final public let authProvider: MBAsyncNetworking.OAuthProvider
+  final public let requestQueue: MBAsyncNetworking.RequestQueue
+  final public let logsManager: MBAsyncNetworking.NetworkLogsManager
+  final public let configs: MBAsyncNetworking.NetworkableConfigs
+  public static let shared: MBAsyncNetworking.NetworkClient
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(storage: any MBAsyncNetworking.NetworkingStorable, session: MBAsyncNetworking.Session = Session(), logsManager: MBAsyncNetworking.NetworkLogsManager = NetworkLogsManager(), authProvider: MBAsyncNetworking.OAuthProvider? = nil, requestQueue: MBAsyncNetworking.RequestQueue? = nil)
+  #endif
   @objc deinit
 }
 public enum NetworkContentType {
   case json
   case urlencoded
   case multipartFormData(Swift.String)
+}
+public enum NetworkError : Swift.Error {
+  case invalidResponse
+  case unauthorized
+  case httpError(statusCode: Swift.Int, responseData: Foundation.Data?)
+  case decodingFailed(statusCode: Swift.Int, detail: Swift.String?, responseData: Foundation.Data?)
+  case tokenRefreshFailed
+}
+extension MBAsyncNetworking.NetworkError : Foundation.LocalizedError {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var errorDescription: Swift.String? {
+    get
+  }
+  #endif
+}
+extension MBAsyncNetworking.NetworkError : Swift.Equatable {
+  public static func == (lhs: MBAsyncNetworking.NetworkError, rhs: MBAsyncNetworking.NetworkError) -> Swift.Bool
 }
 public protocol NetworkingStorable {
   #if compiler(>=5.3) && $NonescapableTypes
@@ -142,9 +286,10 @@ public protocol NetworkingStorable {
   var accessToken: Swift.String? { get set }
   #endif
 }
-@_hasMissingDesignatedInitializers @_Concurrency.MainActor public class OAuthManager {
-  @_Concurrency.MainActor public static let shared: MBAsyncNetworking.OAuthManager
-  @_Concurrency.MainActor public var authManager: MBAsyncNetworking.OAuthProvider
+final public class OAuthManager {
+  public static let shared: MBAsyncNetworking.OAuthManager
+  final public var authManager: MBAsyncNetworking.OAuthProvider
+  public init(authManager: MBAsyncNetworking.OAuthProvider = .init())
   @objc deinit
 }
 public protocol OAuthProviderDelegate : AnyObject {
@@ -158,8 +303,11 @@ public struct OAuthResponse {
   public let expiresIn: Swift.Int
   public init(accessToken: Swift.String, refreshToken: Swift.String, expiresIn: Swift.Int)
 }
-@_hasMissingDesignatedInitializers public actor OAuthProvider {
+public actor OAuthProvider {
   weak public var delegate: (any MBAsyncNetworking.OAuthProviderDelegate)?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(userSession: MBAsyncNetworking.UserSession? = nil)
+  #endif
   public func setDelegate(_ delegate: any MBAsyncNetworking.OAuthProviderDelegate)
   public func validToken() async throws -> MBAsyncNetworking.OAuthResponse
   @discardableResult
@@ -184,8 +332,11 @@ public enum RequestMethod : Swift.String {
     get
   }
 }
-@_hasMissingDesignatedInitializers public actor RequestQueue {
+public actor RequestQueue {
   public static let shared: MBAsyncNetworking.RequestQueue
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(authProvider: MBAsyncNetworking.OAuthProvider, clearUserSession: (() async -> Swift.Void)? = nil)
+  #endif
   public func executeAfterTokenRefresh<T>(_ operation: @escaping () async throws -> T) async throws -> T where T : Swift.Decodable
   @objc deinit
   @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
@@ -226,24 +377,29 @@ public struct File {
   public var data: Foundation.Data
   public init(name: Swift.String, fileName: Swift.String, fileExtension: Swift.String, mimeType: Swift.String, data: Foundation.Data)
 }
-@_hasMissingDesignatedInitializers @_Concurrency.MainActor final public class UserSession : Foundation.ObservableObject {
-  @_Concurrency.MainActor final public class func initialize(with storage: any MBAsyncNetworking.NetworkingStorable)
-  @_Concurrency.MainActor final public class var shared: MBAsyncNetworking.UserSession {
+final public class UserSession : Foundation.ObservableObject {
+  final public var user: MBAsyncNetworking.OAuthResponse? {
     get
   }
-  @_Concurrency.MainActor final public var user: MBAsyncNetworking.OAuthResponse? {
-    get
-  }
-  @_Concurrency.MainActor final public func save(_ user: MBAsyncNetworking.OAuthResponse)
+  public init(storage: any MBAsyncNetworking.NetworkingStorable)
+  final public func save(_ user: MBAsyncNetworking.OAuthResponse)
   #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor final public var token: Swift.String? {
+  final public var token: Swift.String? {
     get
   }
   #endif
-  @_Concurrency.MainActor final public var isLoggedIn: Swift.Bool {
+  final public var isLoggedIn: Swift.Bool {
     get
   }
-  @_Concurrency.MainActor final public class func clear()
+  final public func clear()
+  @available(*, deprecated, message: "Use NetworkClient(storage:) and its userSession instead.")
+  final public class func initialize(with storage: any MBAsyncNetworking.NetworkingStorable)
+  @available(*, deprecated, message: "Use NetworkClient(storage:) and inject the client.")
+  final public class var shared: MBAsyncNetworking.UserSession {
+    get
+  }
+  @available(*, deprecated, message: "Use NetworkClient.userSession.clear()")
+  final public class func clear()
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
@@ -253,10 +409,8 @@ public struct SignedUser {
   public var tokenType: Swift.String?
   public var expiresIn: Swift.Int?
 }
-extension MBAsyncNetworking.NetworkableConfigs : Swift.Equatable {}
-extension MBAsyncNetworking.NetworkableConfigs : Swift.Hashable {}
-extension MBAsyncNetworking.OAuthManager : Swift.Sendable {}
+extension MBAsyncNetworking.NetworkLogLevel : Swift.Hashable {}
+extension MBAsyncNetworking.NetworkLogLevel : Swift.RawRepresentable {}
 extension MBAsyncNetworking.RequestMethod : Swift.Equatable {}
 extension MBAsyncNetworking.RequestMethod : Swift.Hashable {}
 extension MBAsyncNetworking.RequestMethod : Swift.RawRepresentable {}
-extension MBAsyncNetworking.UserSession : Swift.Sendable {}

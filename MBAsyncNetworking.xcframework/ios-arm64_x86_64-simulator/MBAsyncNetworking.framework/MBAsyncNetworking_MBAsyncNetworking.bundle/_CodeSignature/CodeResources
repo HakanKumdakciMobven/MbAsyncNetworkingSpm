@@ -4,13 +4,46 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Info.plist</key>
-		<data>
-		LqUtu/Vh7mW76CeSJWoLtaXsc38=
-		</data>
+		<key>en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3seLjRIYdq74jpDOwx4EKpU48GM=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>tr.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xpBAcrKjIgSYL0rYB+lhvxKOV7U=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>files2</key>
-	<dict/>
+	<dict>
+		<key>en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			TsJfsp1hQJUndhgrRDz1WtdLsml9i8j+eLGHjMTKvB0=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>tr.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			P9YEkSea2VOfuqUbeG42jXaeLcS53I9xhn+fDUy2fwA=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>rules</key>
 	<dict>
 		<key>^.*</key>

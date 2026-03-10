@@ -1,0 +1,11 @@
+auth.error.missingToken = "Kimlik doğrulama başarısız: Token bulunamadı.";
+auth.error.refreshingFailed = "Token yenileme başarısız oldu. Yeni kimlik doğrulama tokenı alınamadı.";
+auth.error.storageNotFound = "Token saklama mekanizması bulunamadı. Kimlik doğrulama depolama sisteminin düzgün çalıştığından emin olun.";
+auth.error.tokenQueueResumeFailed = "Token yenilendikten sonra sıraya alınan istek devam ettirilemedi. Lütfen tekrar deneyin.";
+
+network.error.invalidResponse = "Sunucu geçersiz bir yanıt döndürdü.";
+network.error.unauthorized = "Yetkisiz — kimlik doğrulama gerekli.";
+network.error.httpError = "HTTP hatası %d.";
+network.error.decodingFailed = "Çözümleme başarısız (HTTP %d): %@";
+network.error.decodingFailedShort = "Çözümleme başarısız (HTTP %d).";
+network.error.tokenRefreshFailed = "Token yenileme başarısız — oturum temizlendi.";
