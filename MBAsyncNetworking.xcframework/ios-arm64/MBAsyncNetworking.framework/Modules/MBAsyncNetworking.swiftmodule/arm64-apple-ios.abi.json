@@ -102,6 +102,44 @@
           {
             "kind": "Function",
             "name": "fetch",
+            "printedName": "fetch(hasAuthentication:isRefreshToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE5fetch17hasAuthentication14isRefreshTokenqd__Sb_SbtYaKSeRd__lF",
+            "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE5fetch17hasAuthentication14isRefreshTokenqd__Sb_SbtYaKSeRd__lF",
+            "moduleName": "MBAsyncNetworking",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : MBAsyncNetworking.AsyncNetworkable, τ_1_0 : Swift.Decodable>",
+            "sugared_genericSig": "<Self, T where Self : MBAsyncNetworking.AsyncNetworkable, T : Swift.Decodable>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "fetch",
             "printedName": "fetch(hasAuthentication:isRefreshToken:using:)",
             "children": [
               {
@@ -135,7 +173,6 @@
                     "usr": "s:17MBAsyncNetworking13NetworkClientC"
                   }
                 ],
-                "hasDefaultArg": true,
                 "usr": "s:Sq"
               }
             ],
@@ -150,6 +187,92 @@
             ],
             "isFromExtension": true,
             "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getRequest",
+            "printedName": "getRequest(queryItems:headers:url:httpMethod:addBearerToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RequestMethod",
+                "printedName": "MBAsyncNetworking.RequestMethod",
+                "hasDefaultArg": true,
+                "usr": "s:17MBAsyncNetworking13RequestMethodO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE10getRequest10queryItems7headers3url10httpMethod14addBearerToken10Foundation10URLRequestVSDyS2SG_AmJ3URLVAA0fL0OSbtYaF",
+            "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE10getRequest10queryItems7headers3url10httpMethod14addBearerToken10Foundation10URLRequestVSDyS2SG_AmJ3URLVAA0fL0OSbtYaF",
+            "moduleName": "MBAsyncNetworking",
+            "genericSig": "<τ_0_0 where τ_0_0 : MBAsyncNetworking.AsyncNetworkable>",
+            "sugared_genericSig": "<Self where Self : MBAsyncNetworking.AsyncNetworkable>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           },
           {
@@ -227,25 +350,86 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "MBAsyncNetworking.NetworkClient?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NetworkClient",
-                    "printedName": "MBAsyncNetworking.NetworkClient",
-                    "usr": "s:17MBAsyncNetworking13NetworkClientC"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "name": "NetworkClient",
+                "printedName": "MBAsyncNetworking.NetworkClient",
+                "usr": "s:17MBAsyncNetworking13NetworkClientC"
               }
             ],
             "declKind": "Func",
-            "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE10getRequest10queryItems7headers3url10httpMethod14addBearerToken5using10Foundation10URLRequestVSDyS2SG_AnK3URLVAA0fL0OSbAA13NetworkClientCSgtYaF",
-            "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE10getRequest10queryItems7headers3url10httpMethod14addBearerToken5using10Foundation10URLRequestVSDyS2SG_AnK3URLVAA0fL0OSbAA13NetworkClientCSgtYaF",
+            "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE10getRequest10queryItems7headers3url10httpMethod14addBearerToken5using10Foundation10URLRequestVSDyS2SG_AnK3URLVAA0fL0OSbAA13NetworkClientCtYaF",
+            "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE10getRequest10queryItems7headers3url10httpMethod14addBearerToken5using10Foundation10URLRequestVSDyS2SG_AnK3URLVAA0fL0OSbAA13NetworkClientCtYaF",
             "moduleName": "MBAsyncNetworking",
             "genericSig": "<τ_0_0 where τ_0_0 : MBAsyncNetworking.AsyncNetworkable>",
+            "sugared_genericSig": "<Self where Self : MBAsyncNetworking.AsyncNetworkable>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getRequest",
+            "printedName": "getRequest(body:headers:url:httpMethod:addBearerToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RequestMethod",
+                "printedName": "MBAsyncNetworking.RequestMethod",
+                "hasDefaultArg": true,
+                "usr": "s:17MBAsyncNetworking13RequestMethodO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE10getRequest4body7headers3url10httpMethod14addBearerToken10Foundation10URLRequestVqd___SDyS2SGAJ3URLVAA0fK0OSbtYaSERd__lF",
+            "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE10getRequest4body7headers3url10httpMethod14addBearerToken10Foundation10URLRequestVqd___SDyS2SGAJ3URLVAA0fK0OSbtYaSERd__lF",
+            "moduleName": "MBAsyncNetworking",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : MBAsyncNetworking.AsyncNetworkable, τ_1_0 : Swift.Encodable>",
             "sugared_genericSig": "<Self where Self : MBAsyncNetworking.AsyncNetworkable>",
             "declAttributes": [
               "RawDocComment"
@@ -312,23 +496,105 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "MBAsyncNetworking.NetworkClient?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NetworkClient",
-                    "printedName": "MBAsyncNetworking.NetworkClient",
-                    "usr": "s:17MBAsyncNetworking13NetworkClientC"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "name": "NetworkClient",
+                "printedName": "MBAsyncNetworking.NetworkClient",
+                "usr": "s:17MBAsyncNetworking13NetworkClientC"
               }
             ],
             "declKind": "Func",
-            "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE10getRequest4body7headers3url10httpMethod14addBearerToken5using10Foundation10URLRequestVqd___SDyS2SGAK3URLVAA0fK0OSbAA13NetworkClientCSgtYaSERd__lF",
-            "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE10getRequest4body7headers3url10httpMethod14addBearerToken5using10Foundation10URLRequestVqd___SDyS2SGAK3URLVAA0fK0OSbAA13NetworkClientCSgtYaSERd__lF",
+            "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE10getRequest4body7headers3url10httpMethod14addBearerToken5using10Foundation10URLRequestVqd___SDyS2SGAK3URLVAA0fK0OSbAA13NetworkClientCtYaSERd__lF",
+            "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE10getRequest4body7headers3url10httpMethod14addBearerToken5using10Foundation10URLRequestVqd___SDyS2SGAK3URLVAA0fK0OSbAA13NetworkClientCtYaSERd__lF",
+            "moduleName": "MBAsyncNetworking",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : MBAsyncNetworking.AsyncNetworkable, τ_1_0 : Swift.Encodable>",
+            "sugared_genericSig": "<Self where Self : MBAsyncNetworking.AsyncNetworkable>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getRequest",
+            "printedName": "getRequest(queryItems:body:headers:url:httpMethod:addBearerToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RequestMethod",
+                "printedName": "MBAsyncNetworking.RequestMethod",
+                "hasDefaultArg": true,
+                "usr": "s:17MBAsyncNetworking13RequestMethodO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE10getRequest10queryItems4body7headers3url10httpMethod14addBearerToken10Foundation10URLRequestVSDyS2SG_qd__AnK3URLVAA0fM0OSbtYaSERd__lF",
+            "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE10getRequest10queryItems4body7headers3url10httpMethod14addBearerToken10Foundation10URLRequestVSDyS2SG_qd__AnK3URLVAA0fM0OSbtYaSERd__lF",
             "moduleName": "MBAsyncNetworking",
             "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : MBAsyncNetworking.AsyncNetworkable, τ_1_0 : Swift.Encodable>",
             "sugared_genericSig": "<Self where Self : MBAsyncNetworking.AsyncNetworkable>",
@@ -418,25 +684,102 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "MBAsyncNetworking.NetworkClient?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NetworkClient",
-                    "printedName": "MBAsyncNetworking.NetworkClient",
-                    "usr": "s:17MBAsyncNetworking13NetworkClientC"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "name": "NetworkClient",
+                "printedName": "MBAsyncNetworking.NetworkClient",
+                "usr": "s:17MBAsyncNetworking13NetworkClientC"
               }
             ],
             "declKind": "Func",
-            "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE10getRequest10queryItems4body7headers3url10httpMethod14addBearerToken5using10Foundation10URLRequestVSDyS2SG_qd__AoL3URLVAA0fM0OSbAA13NetworkClientCSgtYaSERd__lF",
-            "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE10getRequest10queryItems4body7headers3url10httpMethod14addBearerToken5using10Foundation10URLRequestVSDyS2SG_qd__AoL3URLVAA0fM0OSbAA13NetworkClientCSgtYaSERd__lF",
+            "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE10getRequest10queryItems4body7headers3url10httpMethod14addBearerToken5using10Foundation10URLRequestVSDyS2SG_qd__AoL3URLVAA0fM0OSbAA13NetworkClientCtYaSERd__lF",
+            "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE10getRequest10queryItems4body7headers3url10httpMethod14addBearerToken5using10Foundation10URLRequestVSDyS2SG_qd__AoL3URLVAA0fM0OSbAA13NetworkClientCtYaSERd__lF",
             "moduleName": "MBAsyncNetworking",
             "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : MBAsyncNetworking.AsyncNetworkable, τ_1_0 : Swift.Encodable>",
+            "sugared_genericSig": "<Self where Self : MBAsyncNetworking.AsyncNetworkable>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getRequest",
+            "printedName": "getRequest(url:formItems:headers:httpMethod:addBearerToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RequestMethod",
+                "printedName": "MBAsyncNetworking.RequestMethod",
+                "hasDefaultArg": true,
+                "usr": "s:17MBAsyncNetworking13RequestMethodO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE10getRequest3url9formItems7headers10httpMethod14addBearerToken10Foundation10URLRequestVAJ3URLV_SDyS2SGAoA0fL0OSbtYaF",
+            "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE10getRequest3url9formItems7headers10httpMethod14addBearerToken10Foundation10URLRequestVAJ3URLV_SDyS2SGAoA0fL0OSbtYaF",
+            "moduleName": "MBAsyncNetworking",
+            "genericSig": "<τ_0_0 where τ_0_0 : MBAsyncNetworking.AsyncNetworkable>",
             "sugared_genericSig": "<Self where Self : MBAsyncNetworking.AsyncNetworkable>",
             "declAttributes": [
               "RawDocComment"
@@ -519,23 +862,107 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "MBAsyncNetworking.NetworkClient?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NetworkClient",
-                    "printedName": "MBAsyncNetworking.NetworkClient",
-                    "usr": "s:17MBAsyncNetworking13NetworkClientC"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "name": "NetworkClient",
+                "printedName": "MBAsyncNetworking.NetworkClient",
+                "usr": "s:17MBAsyncNetworking13NetworkClientC"
               }
             ],
             "declKind": "Func",
-            "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE10getRequest3url9formItems7headers10httpMethod14addBearerToken5using10Foundation10URLRequestVAK3URLV_SDyS2SGApA0fL0OSbAA13NetworkClientCSgtYaF",
-            "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE10getRequest3url9formItems7headers10httpMethod14addBearerToken5using10Foundation10URLRequestVAK3URLV_SDyS2SGApA0fL0OSbAA13NetworkClientCSgtYaF",
+            "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE10getRequest3url9formItems7headers10httpMethod14addBearerToken5using10Foundation10URLRequestVAK3URLV_SDyS2SGApA0fL0OSbAA13NetworkClientCtYaF",
+            "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE10getRequest3url9formItems7headers10httpMethod14addBearerToken5using10Foundation10URLRequestVAK3URLV_SDyS2SGApA0fL0OSbAA13NetworkClientCtYaF",
+            "moduleName": "MBAsyncNetworking",
+            "genericSig": "<τ_0_0 where τ_0_0 : MBAsyncNetworking.AsyncNetworkable>",
+            "sugared_genericSig": "<Self where Self : MBAsyncNetworking.AsyncNetworkable>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "uploadRequest",
+            "printedName": "uploadRequest(method:url:parameters:files:headers:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RequestMethod",
+                "printedName": "MBAsyncNetworking.RequestMethod",
+                "usr": "s:17MBAsyncNetworking13RequestMethodO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[MBAsyncNetworking.File]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "File",
+                    "printedName": "MBAsyncNetworking.File",
+                    "usr": "s:17MBAsyncNetworking4FileV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE13uploadRequest6method3url10parameters5files7headers10Foundation10URLRequestVAA0F6MethodO_AJ3URLVSDyS2SGSayAA4FileVGAQtYaF",
+            "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE13uploadRequest6method3url10parameters5files7headers10Foundation10URLRequestVAA0F6MethodO_AJ3URLVSDyS2SGSayAA4FileVGAQtYaF",
             "moduleName": "MBAsyncNetworking",
             "genericSig": "<τ_0_0 where τ_0_0 : MBAsyncNetworking.AsyncNetworkable>",
             "sugared_genericSig": "<Self where Self : MBAsyncNetworking.AsyncNetworkable>",
@@ -637,13 +1064,100 @@
                     "usr": "s:17MBAsyncNetworking13NetworkClientC"
                   }
                 ],
-                "hasDefaultArg": true,
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
             "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE13uploadRequest6method3url10parameters5files7headers5using10Foundation10URLRequestVAA0F6MethodO_AK3URLVSDyS2SGSayAA4FileVGArA13NetworkClientCSgtYaF",
             "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE13uploadRequest6method3url10parameters5files7headers5using10Foundation10URLRequestVAA0F6MethodO_AK3URLVSDyS2SGSayAA4FileVGArA13NetworkClientCSgtYaF",
+            "moduleName": "MBAsyncNetworking",
+            "genericSig": "<τ_0_0 where τ_0_0 : MBAsyncNetworking.AsyncNetworkable>",
+            "sugared_genericSig": "<Self where Self : MBAsyncNetworking.AsyncNetworkable>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "prepareRequest",
+            "printedName": "prepareRequest(withUrl:queryItems:method:contentType:headers:addBearerToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RequestMethod",
+                "printedName": "MBAsyncNetworking.RequestMethod",
+                "usr": "s:17MBAsyncNetworking13RequestMethodO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkContentType",
+                "printedName": "MBAsyncNetworking.NetworkContentType",
+                "usr": "s:17MBAsyncNetworking18NetworkContentTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE14prepareRequest7withUrl10queryItems6method11contentType7headers14addBearerToken10Foundation10URLRequestVAK3URLV_SDyS2SGAA0F6MethodOAA014NetworkContentM0OAPSbtYaF",
+            "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE14prepareRequest7withUrl10queryItems6method11contentType7headers14addBearerToken10Foundation10URLRequestVAK3URLV_SDyS2SGAA0F6MethodOAA014NetworkContentM0OAPSbtYaF",
             "moduleName": "MBAsyncNetworking",
             "genericSig": "<τ_0_0 where τ_0_0 : MBAsyncNetworking.AsyncNetworkable>",
             "sugared_genericSig": "<Self where Self : MBAsyncNetworking.AsyncNetworkable>",
@@ -743,7 +1257,6 @@
                     "usr": "s:17MBAsyncNetworking13NetworkClientC"
                   }
                 ],
-                "hasDefaultArg": true,
                 "usr": "s:Sq"
               }
             ],
@@ -753,9 +1266,6 @@
             "moduleName": "MBAsyncNetworking",
             "genericSig": "<τ_0_0 where τ_0_0 : MBAsyncNetworking.AsyncNetworkable>",
             "sugared_genericSig": "<Self where Self : MBAsyncNetworking.AsyncNetworkable>",
-            "declAttributes": [
-              "RawDocComment"
-            ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           },
@@ -780,6 +1290,64 @@
             "declKind": "Func",
             "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE7request5using10Foundation10URLRequestVAA13NetworkClientC_tYaF",
             "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE7request5using10Foundation10URLRequestVAA13NetworkClientC_tYaF",
+            "moduleName": "MBAsyncNetworking",
+            "genericSig": "<τ_0_0 where τ_0_0 : MBAsyncNetworking.AsyncNetworkable>",
+            "sugared_genericSig": "<Self where Self : MBAsyncNetworking.AsyncNetworkable>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "printResponse",
+            "printedName": "printResponse(_:request:statusCode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE13printResponse_7request10statusCodey10Foundation4DataVSg_AG10URLRequestVSiSgtF",
+            "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE13printResponse_7request10statusCodey10Foundation4DataVSg_AG10URLRequestVSiSgtF",
             "moduleName": "MBAsyncNetworking",
             "genericSig": "<τ_0_0 where τ_0_0 : MBAsyncNetworking.AsyncNetworkable>",
             "sugared_genericSig": "<Self where Self : MBAsyncNetworking.AsyncNetworkable>",
@@ -846,13 +1414,70 @@
                     "usr": "s:17MBAsyncNetworking13NetworkClientC"
                   }
                 ],
-                "hasDefaultArg": true,
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
             "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE13printResponse_7request10statusCode5usingy10Foundation4DataVSg_AH10URLRequestVSiSgAA13NetworkClientCSgtF",
             "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE13printResponse_7request10statusCode5usingy10Foundation4DataVSg_AH10URLRequestVSiSgAA13NetworkClientCSgtF",
+            "moduleName": "MBAsyncNetworking",
+            "genericSig": "<τ_0_0 where τ_0_0 : MBAsyncNetworking.AsyncNetworkable>",
+            "sugared_genericSig": "<Self where Self : MBAsyncNetworking.AsyncNetworkable>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "printErrorLog",
+            "printedName": "printErrorLog(_:request:statusCode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any Swift.Error)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE13printErrorLog_7request10statusCodeys0F0_pSg_10Foundation10URLRequestVSiSgtF",
+            "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE13printErrorLog_7request10statusCodeys0F0_pSg_10Foundation10URLRequestVSiSgtF",
             "moduleName": "MBAsyncNetworking",
             "genericSig": "<τ_0_0 where τ_0_0 : MBAsyncNetworking.AsyncNetworkable>",
             "sugared_genericSig": "<Self where Self : MBAsyncNetworking.AsyncNetworkable>",
@@ -919,13 +1544,76 @@
                     "usr": "s:17MBAsyncNetworking13NetworkClientC"
                   }
                 ],
-                "hasDefaultArg": true,
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
             "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE13printErrorLog_7request10statusCode5usingys0F0_pSg_10Foundation10URLRequestVSiSgAA13NetworkClientCSgtF",
             "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE13printErrorLog_7request10statusCode5usingys0F0_pSg_10Foundation10URLRequestVSiSgAA13NetworkClientCSgtF",
+            "moduleName": "MBAsyncNetworking",
+            "genericSig": "<τ_0_0 where τ_0_0 : MBAsyncNetworking.AsyncNetworkable>",
+            "sugared_genericSig": "<Self where Self : MBAsyncNetworking.AsyncNetworkable>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "printDecodingError",
+            "printedName": "printDecodingError(_:responseData:request:statusCode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "any Swift.Error",
+                "usr": "s:s5ErrorP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE18printDecodingError_12responseData7request10statusCodeys0G0_p_10Foundation0I0VSgAI10URLRequestVSiSgtF",
+            "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE18printDecodingError_12responseData7request10statusCodeys0G0_p_10Foundation0I0VSgAI10URLRequestVSiSgtF",
             "moduleName": "MBAsyncNetworking",
             "genericSig": "<τ_0_0 where τ_0_0 : MBAsyncNetworking.AsyncNetworkable>",
             "sugared_genericSig": "<Self where Self : MBAsyncNetworking.AsyncNetworkable>",
@@ -998,13 +1686,76 @@
                     "usr": "s:17MBAsyncNetworking13NetworkClientC"
                   }
                 ],
-                "hasDefaultArg": true,
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
             "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE18printDecodingError_12responseData7request10statusCode5usingys0G0_p_10Foundation0I0VSgAJ10URLRequestVSiSgAA13NetworkClientCSgtF",
             "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE18printDecodingError_12responseData7request10statusCode5usingys0G0_p_10Foundation0I0VSgAJ10URLRequestVSiSgAA13NetworkClientCSgtF",
+            "moduleName": "MBAsyncNetworking",
+            "genericSig": "<τ_0_0 where τ_0_0 : MBAsyncNetworking.AsyncNetworkable>",
+            "sugared_genericSig": "<Self where Self : MBAsyncNetworking.AsyncNetworkable>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "printWarningLog",
+            "printedName": "printWarningLog(_:request:statusCode:data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE15printWarningLog_7request10statusCode4dataySS_10Foundation10URLRequestVSiSgAH4DataVSgtF",
+            "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE15printWarningLog_7request10statusCode4dataySS_10Foundation10URLRequestVSiSgAH4DataVSgtF",
             "moduleName": "MBAsyncNetworking",
             "genericSig": "<τ_0_0 where τ_0_0 : MBAsyncNetworking.AsyncNetworkable>",
             "sugared_genericSig": "<Self where Self : MBAsyncNetworking.AsyncNetworkable>",
@@ -1077,7 +1828,6 @@
                     "usr": "s:17MBAsyncNetworking13NetworkClientC"
                   }
                 ],
-                "hasDefaultArg": true,
                 "usr": "s:Sq"
               }
             ],
@@ -1116,6 +1866,452 @@
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MBAsyncNetworking",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NetworkClientConfigs",
+        "printedName": "NetworkClientConfigs",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(session:logsManager:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkClientConfigs",
+                "printedName": "MBAsyncNetworking.NetworkClientConfigs",
+                "usr": "s:17MBAsyncNetworking20NetworkClientConfigsC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Session",
+                "printedName": "MBAsyncNetworking.Session",
+                "usr": "s:17MBAsyncNetworking7SessionC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkLogsManager",
+                "printedName": "MBAsyncNetworking.NetworkLogsManager",
+                "usr": "s:17MBAsyncNetworking18NetworkLogsManagerC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17MBAsyncNetworking20NetworkClientConfigsC7session11logsManagerAcA7SessionC_AA0c4LogsH0Ctcfc",
+            "mangledName": "$s17MBAsyncNetworking20NetworkClientConfigsC7session11logsManagerAcA7SessionC_AA0c4LogsH0Ctcfc",
+            "moduleName": "MBAsyncNetworking",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "setCertificatePaths",
+            "printedName": "setCertificatePaths(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking20NetworkClientConfigsC19setCertificatePathsyySSd_tF",
+            "mangledName": "$s17MBAsyncNetworking20NetworkClientConfigsC19setCertificatePathsyySSd_tF",
+            "moduleName": "MBAsyncNetworking",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setCertificatePathArray",
+            "printedName": "setCertificatePathArray(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking20NetworkClientConfigsC23setCertificatePathArrayyySaySSGF",
+            "mangledName": "$s17MBAsyncNetworking20NetworkClientConfigsC23setCertificatePathArrayyySaySSGF",
+            "moduleName": "MBAsyncNetworking",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setTimeout",
+            "printedName": "setTimeout(for:resource:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking20NetworkClientConfigsC10setTimeout3for8resourceySd_SdtF",
+            "mangledName": "$s17MBAsyncNetworking20NetworkClientConfigsC10setTimeout3for8resourceySd_SdtF",
+            "moduleName": "MBAsyncNetworking",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setServerTrustedURLAuthenticationChallenge",
+            "printedName": "setServerTrustedURLAuthenticationChallenge()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking20NetworkClientConfigsC42setServerTrustedURLAuthenticationChallengeyyF",
+            "mangledName": "$s17MBAsyncNetworking20NetworkClientConfigsC42setServerTrustedURLAuthenticationChallengeyyF",
+            "moduleName": "MBAsyncNetworking",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setServerTrustedAuthenticationChallenge",
+            "printedName": "setServerTrustedAuthenticationChallenge(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PinnableSessionDelegate",
+                "printedName": "any MBAsyncNetworking.PinnableSessionDelegate",
+                "usr": "s:17MBAsyncNetworking23PinnableSessionDelegateP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking20NetworkClientConfigsC39setServerTrustedAuthenticationChallengeyyAA23PinnableSessionDelegate_pF",
+            "mangledName": "$s17MBAsyncNetworking20NetworkClientConfigsC39setServerTrustedAuthenticationChallengeyyAA23PinnableSessionDelegate_pF",
+            "moduleName": "MBAsyncNetworking",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setServerTrustedAuthenticationChallenge",
+            "printedName": "setServerTrustedAuthenticationChallenge()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking20NetworkClientConfigsC39setServerTrustedAuthenticationChallengeyyF",
+            "mangledName": "$s17MBAsyncNetworking20NetworkClientConfigsC39setServerTrustedAuthenticationChallengeyyF",
+            "moduleName": "MBAsyncNetworking",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "set",
+            "printedName": "set(configuration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLSessionConfiguration",
+                "printedName": "Foundation.URLSessionConfiguration",
+                "usr": "c:objc(cs)NSURLSessionConfiguration"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking20NetworkClientConfigsC3set13configurationySo25NSURLSessionConfigurationC_tF",
+            "mangledName": "$s17MBAsyncNetworking20NetworkClientConfigsC3set13configurationySo25NSURLSessionConfigurationC_tF",
+            "moduleName": "MBAsyncNetworking",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setConnectivityWaiting",
+            "printedName": "setConnectivityWaiting(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking20NetworkClientConfigsC22setConnectivityWaitingyySbF",
+            "mangledName": "$s17MBAsyncNetworking20NetworkClientConfigsC22setConnectivityWaitingyySbF",
+            "moduleName": "MBAsyncNetworking",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setLogLevel",
+            "printedName": "setLogLevel(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkLogLevel",
+                "printedName": "MBAsyncNetworking.NetworkLogLevel",
+                "usr": "s:17MBAsyncNetworking15NetworkLogLevelO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking20NetworkClientConfigsC11setLogLevelyyAA0cgH0OF",
+            "mangledName": "$s17MBAsyncNetworking20NetworkClientConfigsC11setLogLevelyyAA0cgH0OF",
+            "moduleName": "MBAsyncNetworking",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addLogHandler",
+            "printedName": "addLogHandler(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkLogHandler",
+                "printedName": "any MBAsyncNetworking.NetworkLogHandler",
+                "usr": "s:17MBAsyncNetworking17NetworkLogHandlerP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking20NetworkClientConfigsC13addLogHandleryyAA0cgH0_pF",
+            "mangledName": "$s17MBAsyncNetworking20NetworkClientConfigsC13addLogHandleryyAA0cgH0_pF",
+            "moduleName": "MBAsyncNetworking",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeAllLogHandlers",
+            "printedName": "removeAllLogHandlers()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking20NetworkClientConfigsC20removeAllLogHandlersyyF",
+            "mangledName": "$s17MBAsyncNetworking20NetworkClientConfigsC20removeAllLogHandlersyyF",
+            "moduleName": "MBAsyncNetworking",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enableConsoleLogger",
+            "printedName": "enableConsoleLogger(minimumLogLevel:showBodies:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkLogLevel",
+                "printedName": "MBAsyncNetworking.NetworkLogLevel",
+                "hasDefaultArg": true,
+                "usr": "s:17MBAsyncNetworking15NetworkLogLevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking20NetworkClientConfigsC19enableConsoleLogger15minimumLogLevel10showBodiesyAA0cjK0O_SbtF",
+            "mangledName": "$s17MBAsyncNetworking20NetworkClientConfigsC19enableConsoleLogger15minimumLogLevel10showBodiesyAA0cjK0O_SbtF",
+            "moduleName": "MBAsyncNetworking",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setLogRedactedHeaders",
+            "printedName": "setLogRedactedHeaders(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sh"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking20NetworkClientConfigsC21setLogRedactedHeadersyyShySSGF",
+            "mangledName": "$s17MBAsyncNetworking20NetworkClientConfigsC21setLogRedactedHeadersyyShySSGF",
+            "moduleName": "MBAsyncNetworking",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:17MBAsyncNetworking20NetworkClientConfigsC",
+        "mangledName": "$s17MBAsyncNetworking20NetworkClientConfigsC",
+        "moduleName": "MBAsyncNetworking",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -1737,85 +2933,36 @@
             "printedName": "default",
             "children": [
               {
-                "kind": "TypeNominal",
-                "name": "NetworkableConfigs",
-                "printedName": "MBAsyncNetworking.NetworkableConfigs",
-                "usr": "s:17MBAsyncNetworking18NetworkableConfigsC"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:17MBAsyncNetworking18NetworkableConfigsC7defaultACvpZ",
-            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsC7defaultACvpZ",
-            "moduleName": "MBAsyncNetworking",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MBAsyncNetworking.NetworkableConfigs.Type) -> MBAsyncNetworking.NetworkableConfigs",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "NetworkableConfigs",
                     "printedName": "MBAsyncNetworking.NetworkableConfigs",
-                    "usr": "s:17MBAsyncNetworking18NetworkableConfigsC"
+                    "usr": "s:17MBAsyncNetworking18NetworkableConfigsO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MBAsyncNetworking.NetworkableConfigs.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkableConfigs",
+                        "printedName": "MBAsyncNetworking.NetworkableConfigs",
+                        "usr": "s:17MBAsyncNetworking18NetworkableConfigsO"
+                      }
+                    ]
                   }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17MBAsyncNetworking18NetworkableConfigsC7defaultACvgZ",
-                "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsC7defaultACvgZ",
-                "moduleName": "MBAsyncNetworking",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(session:logsManager:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "NetworkableConfigs",
-                "printedName": "MBAsyncNetworking.NetworkableConfigs",
-                "usr": "s:17MBAsyncNetworking18NetworkableConfigsC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Session",
-                "printedName": "MBAsyncNetworking.Session",
-                "hasDefaultArg": true,
-                "usr": "s:17MBAsyncNetworking7SessionC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "NetworkLogsManager",
-                "printedName": "MBAsyncNetworking.NetworkLogsManager",
-                "hasDefaultArg": true,
-                "usr": "s:17MBAsyncNetworking18NetworkLogsManagerC"
+                ]
               }
             ],
-            "declKind": "Constructor",
-            "usr": "s:17MBAsyncNetworking18NetworkableConfigsC7session11logsManagerAcA7SessionC_AA011NetworkLogsG0Ctcfc",
-            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsC7session11logsManagerAcA7SessionC_AA011NetworkLogsG0Ctcfc",
-            "moduleName": "MBAsyncNetworking",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
+            "declKind": "EnumElement",
+            "usr": "s:17MBAsyncNetworking18NetworkableConfigsO7defaultyA2CmF",
+            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsO7defaultyA2CmF",
+            "moduleName": "MBAsyncNetworking"
           },
           {
             "kind": "Function",
@@ -1843,11 +2990,10 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:17MBAsyncNetworking18NetworkableConfigsC19setCertificatePathsyySSd_tF",
-            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsC19setCertificatePathsyySSd_tF",
+            "usr": "s:17MBAsyncNetworking18NetworkableConfigsO19setCertificatePathsyySSd_tF",
+            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsO19setCertificatePathsyySSd_tF",
             "moduleName": "MBAsyncNetworking",
             "declAttributes": [
-              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -1879,11 +3025,10 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:17MBAsyncNetworking18NetworkableConfigsC23setCertificatePathArrayyySaySSGF",
-            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsC23setCertificatePathArrayyySaySSGF",
+            "usr": "s:17MBAsyncNetworking18NetworkableConfigsO23setCertificatePathArrayyySaySSGF",
+            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsO23setCertificatePathArrayyySaySSGF",
             "moduleName": "MBAsyncNetworking",
             "declAttributes": [
-              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -1913,11 +3058,10 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:17MBAsyncNetworking18NetworkableConfigsC10setTimeout3for8resourceySd_SdtF",
-            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsC10setTimeout3for8resourceySd_SdtF",
+            "usr": "s:17MBAsyncNetworking18NetworkableConfigsO10setTimeout3for8resourceySd_SdtF",
+            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsO10setTimeout3for8resourceySd_SdtF",
             "moduleName": "MBAsyncNetworking",
             "declAttributes": [
-              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -1935,11 +3079,10 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:17MBAsyncNetworking18NetworkableConfigsC42setServerTrustedURLAuthenticationChallengeyyF",
-            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsC42setServerTrustedURLAuthenticationChallengeyyF",
+            "usr": "s:17MBAsyncNetworking18NetworkableConfigsO42setServerTrustedURLAuthenticationChallengeyyF",
+            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsO42setServerTrustedURLAuthenticationChallengeyyF",
             "moduleName": "MBAsyncNetworking",
             "declAttributes": [
-              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -1963,11 +3106,10 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:17MBAsyncNetworking18NetworkableConfigsC39setServerTrustedAuthenticationChallengeyyAA23PinnableSessionDelegate_pF",
-            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsC39setServerTrustedAuthenticationChallengeyyAA23PinnableSessionDelegate_pF",
+            "usr": "s:17MBAsyncNetworking18NetworkableConfigsO39setServerTrustedAuthenticationChallengeyyAA23PinnableSessionDelegate_pF",
+            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsO39setServerTrustedAuthenticationChallengeyyAA23PinnableSessionDelegate_pF",
             "moduleName": "MBAsyncNetworking",
             "declAttributes": [
-              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -1985,11 +3127,10 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:17MBAsyncNetworking18NetworkableConfigsC39setServerTrustedAuthenticationChallengeyyF",
-            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsC39setServerTrustedAuthenticationChallengeyyF",
+            "usr": "s:17MBAsyncNetworking18NetworkableConfigsO39setServerTrustedAuthenticationChallengeyyF",
+            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsO39setServerTrustedAuthenticationChallengeyyF",
             "moduleName": "MBAsyncNetworking",
             "declAttributes": [
-              "Final",
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
@@ -2012,11 +3153,10 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:17MBAsyncNetworking18NetworkableConfigsC3set13configurationySo25NSURLSessionConfigurationC_tF",
-            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsC3set13configurationySo25NSURLSessionConfigurationC_tF",
+            "usr": "s:17MBAsyncNetworking18NetworkableConfigsO3set13configurationySo25NSURLSessionConfigurationC_tF",
+            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsO3set13configurationySo25NSURLSessionConfigurationC_tF",
             "moduleName": "MBAsyncNetworking",
             "declAttributes": [
-              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -2040,11 +3180,10 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:17MBAsyncNetworking18NetworkableConfigsC22setConnectivityWaitingyySbF",
-            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsC22setConnectivityWaitingyySbF",
+            "usr": "s:17MBAsyncNetworking18NetworkableConfigsO22setConnectivityWaitingyySbF",
+            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsO22setConnectivityWaitingyySbF",
             "moduleName": "MBAsyncNetworking",
             "declAttributes": [
-              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -2068,11 +3207,10 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:17MBAsyncNetworking18NetworkableConfigsC11setLogLevelyyAA07NetworkfG0OF",
-            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsC11setLogLevelyyAA07NetworkfG0OF",
+            "usr": "s:17MBAsyncNetworking18NetworkableConfigsO11setLogLevelyyAA07NetworkfG0OF",
+            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsO11setLogLevelyyAA07NetworkfG0OF",
             "moduleName": "MBAsyncNetworking",
             "declAttributes": [
-              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -2096,11 +3234,10 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:17MBAsyncNetworking18NetworkableConfigsC13addLogHandleryyAA07NetworkfG0_pF",
-            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsC13addLogHandleryyAA07NetworkfG0_pF",
+            "usr": "s:17MBAsyncNetworking18NetworkableConfigsO13addLogHandleryyAA07NetworkfG0_pF",
+            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsO13addLogHandleryyAA07NetworkfG0_pF",
             "moduleName": "MBAsyncNetworking",
             "declAttributes": [
-              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -2118,11 +3255,10 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:17MBAsyncNetworking18NetworkableConfigsC20removeAllLogHandlersyyF",
-            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsC20removeAllLogHandlersyyF",
+            "usr": "s:17MBAsyncNetworking18NetworkableConfigsO20removeAllLogHandlersyyF",
+            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsO20removeAllLogHandlersyyF",
             "moduleName": "MBAsyncNetworking",
             "declAttributes": [
-              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -2154,11 +3290,10 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:17MBAsyncNetworking18NetworkableConfigsC19enableConsoleLogger15minimumLogLevel10showBodiesyAA07NetworkiJ0O_SbtF",
-            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsC19enableConsoleLogger15minimumLogLevel10showBodiesyAA07NetworkiJ0O_SbtF",
+            "usr": "s:17MBAsyncNetworking18NetworkableConfigsO19enableConsoleLogger15minimumLogLevel10showBodiesyAA07NetworkiJ0O_SbtF",
+            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsO19enableConsoleLogger15minimumLogLevel10showBodiesyAA07NetworkiJ0O_SbtF",
             "moduleName": "MBAsyncNetworking",
             "declAttributes": [
-              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -2190,23 +3325,117 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:17MBAsyncNetworking18NetworkableConfigsC21setLogRedactedHeadersyyShySSGF",
-            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsC21setLogRedactedHeadersyyShySSGF",
+            "usr": "s:17MBAsyncNetworking18NetworkableConfigsO21setLogRedactedHeadersyyShySSGF",
+            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsO21setLogRedactedHeadersyyShySSGF",
             "moduleName": "MBAsyncNetworking",
             "declAttributes": [
-              "Final",
               "AccessControl",
               "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkableConfigs",
+                "printedName": "MBAsyncNetworking.NetworkableConfigs",
+                "usr": "s:17MBAsyncNetworking18NetworkableConfigsO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkableConfigs",
+                "printedName": "MBAsyncNetworking.NetworkableConfigs",
+                "usr": "s:17MBAsyncNetworking18NetworkableConfigsO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking18NetworkableConfigsO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsO2eeoiySbAC_ACtFZ",
+            "moduleName": "MBAsyncNetworking",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17MBAsyncNetworking18NetworkableConfigsO9hashValueSivp",
+            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsO9hashValueSivp",
+            "moduleName": "MBAsyncNetworking",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17MBAsyncNetworking18NetworkableConfigsO9hashValueSivg",
+                "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsO9hashValueSivg",
+                "moduleName": "MBAsyncNetworking",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking18NetworkableConfigsO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsO4hash4intoys6HasherVz_tF",
+            "moduleName": "MBAsyncNetworking",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
-        "declKind": "Class",
-        "usr": "s:17MBAsyncNetworking18NetworkableConfigsC",
-        "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsC",
+        "declKind": "Enum",
+        "usr": "s:17MBAsyncNetworking18NetworkableConfigsO",
+        "mangledName": "$s17MBAsyncNetworking18NetworkableConfigsO",
         "moduleName": "MBAsyncNetworking",
         "declAttributes": [
-          "Final",
           "AccessControl"
         ],
         "conformances": [
@@ -2223,6 +3452,20 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           }
         ]
       },
@@ -6245,14 +7488,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "NetworkableConfigs",
-                "printedName": "MBAsyncNetworking.NetworkableConfigs",
-                "usr": "s:17MBAsyncNetworking18NetworkableConfigsC"
+                "name": "NetworkClientConfigs",
+                "printedName": "MBAsyncNetworking.NetworkClientConfigs",
+                "usr": "s:17MBAsyncNetworking20NetworkClientConfigsC"
               }
             ],
             "declKind": "Var",
-            "usr": "s:17MBAsyncNetworking13NetworkClientC7configsAA18NetworkableConfigsCvp",
-            "mangledName": "$s17MBAsyncNetworking13NetworkClientC7configsAA18NetworkableConfigsCvp",
+            "usr": "s:17MBAsyncNetworking13NetworkClientC7configsAA0cD7ConfigsCvp",
+            "mangledName": "$s17MBAsyncNetworking13NetworkClientC7configsAA0cD7ConfigsCvp",
             "moduleName": "MBAsyncNetworking",
             "declAttributes": [
               "Final",
@@ -6269,14 +7512,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "NetworkableConfigs",
-                    "printedName": "MBAsyncNetworking.NetworkableConfigs",
-                    "usr": "s:17MBAsyncNetworking18NetworkableConfigsC"
+                    "name": "NetworkClientConfigs",
+                    "printedName": "MBAsyncNetworking.NetworkClientConfigs",
+                    "usr": "s:17MBAsyncNetworking20NetworkClientConfigsC"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:17MBAsyncNetworking13NetworkClientC7configsAA18NetworkableConfigsCvg",
-                "mangledName": "$s17MBAsyncNetworking13NetworkClientC7configsAA18NetworkableConfigsCvg",
+                "usr": "s:17MBAsyncNetworking13NetworkClientC7configsAA0cD7ConfigsCvg",
+                "mangledName": "$s17MBAsyncNetworking13NetworkClientC7configsAA0cD7ConfigsCvg",
                 "moduleName": "MBAsyncNetworking",
                 "implicit": true,
                 "declAttributes": [
@@ -7384,6 +8627,7 @@
               "HasInitialValue",
               "Final",
               "HasStorage",
+              "Custom",
               "AccessControl",
               "RawDocComment"
             ],
@@ -7432,13 +8676,10 @@
             "mangledName": "$s17MBAsyncNetworking12OAuthManagerC04authD0AA0C8ProviderCvp",
             "moduleName": "MBAsyncNetworking",
             "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
+              "Custom",
               "AccessControl",
               "RawDocComment"
             ],
-            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -7456,10 +8697,6 @@
                 "usr": "s:17MBAsyncNetworking12OAuthManagerC04authD0AA0C8ProviderCvg",
                 "mangledName": "$s17MBAsyncNetworking12OAuthManagerC04authD0AA0C8ProviderCvg",
                 "moduleName": "MBAsyncNetworking",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
                 "accessorKind": "get"
               },
               {
@@ -7483,10 +8720,6 @@
                 "usr": "s:17MBAsyncNetworking12OAuthManagerC04authD0AA0C8ProviderCvs",
                 "mangledName": "$s17MBAsyncNetworking12OAuthManagerC04authD0AA0C8ProviderCvs",
                 "moduleName": "MBAsyncNetworking",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
                 "accessorKind": "set"
               },
               {
@@ -7505,9 +8738,6 @@
                 "mangledName": "$s17MBAsyncNetworking12OAuthManagerC04authD0AA0C8ProviderCvM",
                 "moduleName": "MBAsyncNetworking",
                 "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -7536,6 +8766,7 @@
             "mangledName": "$s17MBAsyncNetworking12OAuthManagerC04authD0AcA0C8ProviderC_tcfc",
             "moduleName": "MBAsyncNetworking",
             "declAttributes": [
+              "Custom",
               "AccessControl"
             ],
             "init_kind": "Designated"
@@ -7546,8 +8777,8 @@
         "mangledName": "$s17MBAsyncNetworking12OAuthManagerC",
         "moduleName": "MBAsyncNetworking",
         "declAttributes": [
-          "Final",
           "AccessControl",
+          "Custom",
           "RawDocComment"
         ],
         "conformances": [
@@ -7564,6 +8795,13 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -12277,133 +13515,273 @@
     {
       "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+Data.swift",
       "kind": "BooleanLiteral",
-      "offset": 745,
+      "offset": 374,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+Data.swift",
       "kind": "BooleanLiteral",
-      "offset": 782,
+      "offset": 411,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+Data.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1120,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+Data.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1157,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
       "kind": "Dictionary",
-      "offset": 773,
+      "offset": 364,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
       "kind": "Dictionary",
-      "offset": 814,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
-      "kind": "BooleanLiteral",
-      "offset": 910,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
-      "kind": "Dictionary",
-      "offset": 1804,
+      "offset": 405,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
       "kind": "BooleanLiteral",
-      "offset": 1901,
+      "offset": 501,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
       "kind": "Dictionary",
-      "offset": 2909,
+      "offset": 1301,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
       "kind": "Dictionary",
-      "offset": 2980,
+      "offset": 1342,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
       "kind": "BooleanLiteral",
-      "offset": 3077,
+      "offset": 1438,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
       "kind": "Dictionary",
-      "offset": 4052,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
-      "kind": "Dictionary",
-      "offset": 4093,
+      "offset": 1930,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
       "kind": "BooleanLiteral",
-      "offset": 4172,
+      "offset": 2027,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
       "kind": "Dictionary",
-      "offset": 5734,
+      "offset": 2892,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2989,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
+      "kind": "Dictionary",
+      "offset": 3496,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
+      "kind": "Dictionary",
+      "offset": 3567,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3664,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
+      "kind": "Dictionary",
+      "offset": 4637,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
+      "kind": "Dictionary",
+      "offset": 4708,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4805,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
+      "kind": "Dictionary",
+      "offset": 5365,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
+      "kind": "Dictionary",
+      "offset": 5406,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5485,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
+      "kind": "Dictionary",
+      "offset": 6553,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
+      "kind": "Dictionary",
+      "offset": 6594,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6673,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
+      "kind": "Dictionary",
+      "offset": 8238,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
       "kind": "Array",
-      "offset": 5763,
+      "offset": 8267,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
       "kind": "Dictionary",
-      "offset": 5803,
+      "offset": 8307,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
       "kind": "Dictionary",
-      "offset": 8025,
+      "offset": 8662,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
+      "kind": "Array",
+      "offset": 8691,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
+      "kind": "Dictionary",
+      "offset": 8731,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
       "kind": "Dictionary",
-      "offset": 8138,
+      "offset": 10947,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
+      "kind": "Dictionary",
+      "offset": 11060,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
       "kind": "BooleanLiteral",
-      "offset": 8174,
+      "offset": 11096,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
+      "kind": "Dictionary",
+      "offset": 11491,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
+      "kind": "Dictionary",
+      "offset": 11604,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/AsyncNetworkable+URLRequest.swift",
+      "kind": "BooleanLiteral",
+      "offset": 11640,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/Config\/NetworkClientConfigs.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1971,
       "length": 4,
       "value": "true"
     },
@@ -12424,7 +13802,7 @@
     {
       "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/Config\/NetworkableConfigs.swift",
       "kind": "BooleanLiteral",
-      "offset": 4425,
+      "offset": 4093,
       "length": 4,
       "value": "true"
     },
@@ -12641,7 +14019,7 @@
     {
       "filePath": "\/Users\/cemeke\/Desktop\/MBAsyncNetworking\/Sources\/MBAsyncNetworking\/RequestQueue.swift",
       "kind": "Array",
-      "offset": 1023,
+      "offset": 1022,
       "length": 2,
       "value": "[]"
     },
