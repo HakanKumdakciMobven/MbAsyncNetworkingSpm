@@ -140,6 +140,10 @@ extension Foundation.URL {
   public func adding(parameters: [Swift.String : Swift.String]) -> Foundation.URL
 }
 extension MBAsyncNetworking.AsyncNetworkable {
+  public func printRequestLog(_ request: Foundation.URLRequest)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func printRequestLog(_ request: Foundation.URLRequest, using client: MBAsyncNetworking.NetworkClient?)
+  #endif
   #if compiler(>=5.3) && $NonescapableTypes
   public func printResponse(_ data: Foundation.Data?, request: Foundation.URLRequest, statusCode: Swift.Int? = nil)
   #endif

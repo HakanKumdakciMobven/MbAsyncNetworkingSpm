@@ -1301,6 +1301,78 @@
           },
           {
             "kind": "Function",
+            "name": "printRequestLog",
+            "printedName": "printRequestLog(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE15printRequestLogyy10Foundation10URLRequestVF",
+            "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE15printRequestLogyy10Foundation10URLRequestVF",
+            "moduleName": "MBAsyncNetworking",
+            "genericSig": "<τ_0_0 where τ_0_0 : MBAsyncNetworking.AsyncNetworkable>",
+            "sugared_genericSig": "<Self where Self : MBAsyncNetworking.AsyncNetworkable>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "printRequestLog",
+            "printedName": "printRequestLog(_:using:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MBAsyncNetworking.NetworkClient?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NetworkClient",
+                    "printedName": "MBAsyncNetworking.NetworkClient",
+                    "usr": "s:17MBAsyncNetworking13NetworkClientC"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17MBAsyncNetworking16AsyncNetworkablePAAE15printRequestLog_5usingy10Foundation10URLRequestV_AA13NetworkClientCSgtF",
+            "mangledName": "$s17MBAsyncNetworking16AsyncNetworkablePAAE15printRequestLog_5usingy10Foundation10URLRequestV_AA13NetworkClientCSgtF",
+            "moduleName": "MBAsyncNetworking",
+            "genericSig": "<τ_0_0 where τ_0_0 : MBAsyncNetworking.AsyncNetworkable>",
+            "sugared_genericSig": "<Self where Self : MBAsyncNetworking.AsyncNetworkable>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "printResponse",
             "printedName": "printResponse(_:request:statusCode:)",
             "children": [
